@@ -75,3 +75,8 @@ jobs:
           cwd: "./symbols"
           add: "*.sym"
           message: ${{ github.event.commits[0].message }}
+      - name: Crystal ROM Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: "PokeCrystal"
+          path: "pokecrystal.gbc"
